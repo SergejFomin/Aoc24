@@ -1,16 +1,18 @@
 mod day1;
+mod day2;
 
 use std::{env, fs, path::PathBuf};
 
 fn main() {
-    let day = 1;
+    let day = 2;
     let filename = format!("day{}.txt", day);
     let content = get_input(&filename);
     if day == 1 {
         day1::run1(content.clone());
         day1::run2(content);
     } else if day == 2 {
-        // day2::run1(content);
+        day2::run1(content.clone());
+        day2::run2(content);
     }
 }
 
