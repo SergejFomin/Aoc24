@@ -11,7 +11,7 @@ pub fn run1(input: String){
         }
     }
 
-    println!("The result for day2 task1 is {}", sum);
+    println!("The result for day3 task1 is {}", sum);
 }
 
 pub fn run2(input: String){
@@ -40,7 +40,7 @@ pub fn run2(input: String){
         }
     }
 
-    println!("The result for day2 task2 is {}", sum);
+    println!("The result for day3 task2 is {}", sum);
 }
 
 struct SimpleOperation{
