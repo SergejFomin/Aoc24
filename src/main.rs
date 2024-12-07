@@ -1,11 +1,12 @@
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 use std::{env, fs, path::PathBuf};
 
 fn main() {
-    let day = 3;
+    let day = 4;
     let filename = format!("day{}.txt", day);
     let content = get_input(&filename);
     if day == 1 {
@@ -17,6 +18,9 @@ fn main() {
     } else if day == 3 {
         day3::run1(content.clone());
         day3::run2(content);
+    } else if day == 4 {
+        // day4::run1::run(content.clone());
+        day4::run2::run(content);
     }
 }
 
@@ -27,6 +31,5 @@ pub fn get_input(file_name: &str) -> String {
     let mut path_to_input = PathBuf::from(env::current_dir().unwrap().as_path());
     path_to_input.push(relative_input_path.clone());
     println!("{}", path_to_input.display());
-    let content = fs::read_to_string(relative_input_path).unwrap();
-    return content;
+    return fs::read_to_string(relative_input_path).unwrap();
 }
